@@ -56,6 +56,10 @@ Plug 'morhetz/gruvbox'
 
 Plug 'vimwiki/vimwiki'
 
+Plug 'tmhedberg/Simpylfold'
+Plug 'preservim/tagbar'
+Plug 'dense-analysis/ale'
+
 call plug#end()
 
 "let g:airline_theme='minimalist'
@@ -111,6 +115,13 @@ let mapleader = "\<space>"
 
 " NERDTree
 map <C-n> : NERDTreeToggle<CR>
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
+
+" Pylint with pylint-django
+let g:ale_python_pylint_options = '--load-plugins pylint_django'
+
 
 " Fast split navigatyion withg <Ctrl> + hjkl
 noremap <c-h> <c-w><c-h>
