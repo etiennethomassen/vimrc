@@ -61,6 +61,8 @@ Plug 'tmhedberg/Simpylfold'
 Plug 'preservim/tagbar'
 Plug 'dense-analysis/ale'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
