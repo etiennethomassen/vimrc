@@ -49,6 +49,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
 
 Plug 'easymotion/vim-easymotion'
 
@@ -59,6 +60,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'tmhedberg/Simpylfold'
 Plug 'preservim/tagbar'
 Plug 'dense-analysis/ale'
+Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 
@@ -120,7 +122,7 @@ map <C-n> : NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
 " Pylint with pylint-django
-let g:ale_python_pylint_options = '--load-plugins pylint_django'
+" let g:ale_python_pylint_options = '--load-plugins pylint_django'
 
 
 " Fast split navigatyion withg <Ctrl> + hjkl
@@ -131,6 +133,10 @@ noremap <c-l> <c-w><c-l>
 
 " Esc key
 inoremap ii <esc>
+
+" Execute python
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
 " Gruvbox theme
 let g:gruvbox_italic=1
