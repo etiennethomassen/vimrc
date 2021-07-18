@@ -64,6 +64,9 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 "let g:airline_theme='minimalist'
